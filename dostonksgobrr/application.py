@@ -45,3 +45,8 @@ def data():
             "next-bell": f"{calendar.next_bell().isoformat()}+00:00",
         }
     )
+
+
+@APPLICATION.route("/robots.txt")
+def robots():
+    return APPLICATION.send_static_file("robots.txt")
