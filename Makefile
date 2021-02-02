@@ -1,5 +1,7 @@
 # tox-poetry-installer makefile
 
+VERSION  = $(shell cat pyproject.toml | grep "^version =" | cut -d "\"" -f 2)
+
 .PHONY: help
 # Put it first so that "make" without argument is like "make help"
 # Adapted from:
@@ -35,3 +37,12 @@ test: ## Run the project testsuite(s)
 dev: ## Create the local dev environment
 	poetry install
 	poetry run pre-commit install
+
+image:  ## Build the docker image
+	docker build . --tag dostonksgobrr:$(VERSION)
+
+latest: test image  ## Build the docker image and tag as latest
+	docker tag dostonksgobrr:$(VERSION) dostonksgobrr:latest
+
+run: dev  # Run the debug server locally
+	poetry run python -m dostonksgobrr -d
