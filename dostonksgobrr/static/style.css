@@ -1,0 +1,91 @@
+body {
+  background-color: white;
+  color: black;
+}
+
+#main {
+  max-width: 90%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+
+  text-align: center;
+}
+
+#status {
+  font-size: 10em;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+
+  border-style: solid;
+  border-radius: 0.5em;
+  border-width: 5px;
+}
+
+#status.yes {
+  border-color: #26c148;
+}
+
+#api input {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+span.readable {
+  font-family: monospace;
+  font-weight: bold;
+  background-color: rgb(220, 220, 220);
+  padding: 0.5em;
+  border-radius: 2px;
+  font-size: 1.5em;
+}
+
+a, a:after {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 3px 3px 10px #fff, -3px -3px 10px #fff;
+  text-decoration: underline;
+}
+
+footer {
+  position: absolute;
+  left: 50%;
+  bottom: 0.5em;
+  transform: translate(-50%, 0);
+}
+
+footer a {
+  margin-bottom: 2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  text-transform: lowercase;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(50, 50, 50);
+    color: white;
+  }
+
+  span.readable {
+    background-color: rgb(30, 30, 30);
+  }
+
+  a, a:after {
+    color: rgb(220, 220, 220);
+  }
+
+  a:hover {
+    text-shadow: 3px 3px 10px #fff, -3px -3px 10px #000;
+    text-decoration: underline;
+  }
+}

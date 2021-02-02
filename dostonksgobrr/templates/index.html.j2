@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Web crawler and search indexing meta -->
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="author" content="admin@enp.one"/>
+  <meta name="description" content="Check if the NYSE is open for trading"/>
+  <meta name="keywords" content="{{ meta_tags | join(', ')}}"/>
+  <meta name="robots" content="index,follow"/>
+
+  <!-- Facebook integration meta -->
+  <meta property="og:title" content="Do Stonks Go Brr?"/>
+  <meta property="og:url" content="{{ url_base }}/"/>
+  <meta property='og:site_name' content="Do Stonks Go Brr?"/>
+  <meta property="og:type" content="website"/>
+  <meta property='og:locale' content="en_US"/>
+  <meta property='og:description' content="Check if the NYSE is open for trading"/>
+
+  <!-- Twitter integration meta -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="{{ url_base }}">
+  <meta name="twitter:title" content="Do Stonks Go Brr?">
+  <meta name="twitter:description" content="Check if the NYSE is open for trading">
+
+  <!-- Page title and favicon definition -->
+  <title>Do Stonks Go Brr?</title>
+
+  <!-- CSS references -->
+  <link href="{{ url_style }}" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="main">
+    <div id="status" class="{{ 'yes' if status else 'no' }}">{{ 'YES!' if status else 'NO' }}</div>
+
+    <div id="nextbell">
+      <p>
+        The NYSE is currently {{ 'open' if status else 'closed' }},
+        so the stonks do {{ 'not' if not status else '' }} go brr{{ '!' if status else '.' }}
+        The {{ 'closing' if status else 'opening' }} bell will be at:
+      </p>
+      <span class="readable">{{ next_bell }}</span>
+    </div>
+
+    <div id="api">
+      <p>Need this data programatically? No problem! Use the URL below:</p>
+
+      <input type="text" readonly value="{{ url_base }}data.json"></input>
+    </div>
+  </div>
+
+  <footer>
+    <a href="https://github.com/enpaul/dostonksgobrr.com/blob/devel/DISCLAIMER.md">Disclaimer</a>/
+    <a href="https://github.com/enpaul/dostonksgobrr.com/blob/devel/README.md">What is This?</a>/
+    <a href="https://github.com/enpaul/dostonksgobrr.com/issues/new">Having Problems?</a>
+  <footer>
+</body>
+
+</html>

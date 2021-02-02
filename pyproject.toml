@@ -10,7 +10,9 @@ packages = [
   {include = "tests/*.py", format = "sdist"}
 ]
 include = [
-  "dostonksgobrr/py.typed"
+  "dostonksgobrr/py.typed",
+  "dostonksgobrr/static/",
+  "dostonksgobrr/templates/"
 ]
 readme = "README.md"
 
