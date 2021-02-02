@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dostonksgobrr"
-version = "0.0.0"
+version = "2021.2.1"
 license = "MIT"
 authors = ["Ethan Paul <24588726+enpaul@users.noreply.github.com>"]
 description = "A simple web app to let you know if the market is open"

@@ -1257,12 +1257,12 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=3.5,!=3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pytest-cov", "jaraco.test (>=3.2.0)", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy"]
 
 [extras]
-deploy = ["gunicorn"]
+deploy = ["gunicorn", "Flask-Minify"]
 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7.0"
-content-hash = "5a21bfc5f4e1f1df3df003b992159b729937ada8d14725215d64bba7fa642121"
+content-hash = "fc8fa94e38445153abea009210f5162ff8bf4165db06af88a2606d0396e91016"
 
 [metadata.files]
 appdirs = [
